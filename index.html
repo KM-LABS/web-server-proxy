@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>프록시 서버 설명</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #C0C0C0;
+            font-family: 'Verdana', 'Arial', sans-serif;
+            color: #000000;
+            line-height: 1.4;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 700px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #000000;
+            background-color: #FFFFFF;
+            padding: 15px;
+            box-shadow: 5px 5px 0px #808080;
+        }
+
+        h1 {
+            color: #0000FF;
+            font-size: 24px;
+            text-shadow: 2px 2px 0px #FFFF00;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        h2 {
+            color: #FF0000;
+            font-size: 18px;
+            border-bottom: 2px dashed #FF0000;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .blinking {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .marquee-container {
+            border: 1px solid #000000;
+            background-color: #FFFFCC;
+            padding: 5px;
+            margin-top: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            background-color: #EEEEEE;
+        }
+
+        .diagram-box {
+            border: 2px solid #000000;
+            padding: 10px;
+            text-align: center;
+            background-color: transparent;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        .diagram-arrow {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">▶▶KMHS LABS 프록시 서버에 오신 것을 환영합니다!◀◀</h1>
+
+        <p align="center">
+
+        </p>
+
+        <div class="marquee-container">
+            <span class="marquee-content">★ 이 페이지는 KMHS LABS 프록시 서버 구조에 대한 정보를 제공합니다 ★</span>
+        </div>
+
+        <h2><span class="blinking">◆</span> 프록시 서버란?</h2>
+        <p>
+            프록시 서버는 클라이언트(예: 여러분의 컴퓨터)와 다른 서버(예: 웹사이트) 사이에 위치한 중개자 역할을 합니다. 여러분이 웹사이트에 접속하려고 할 때, 요청은 먼저 프록시 서버로 보내지고,
+            프록시 서버가 대신 해당 웹사이트에 접속하여 응답을 받아 여러분에게 전달해줍니다.
+        </p>
+        <p>
+            이러한 중개 역할은 여러 가지 이점을 제공합니다:
+        <ul>
+            <li><b>보안 강화:</b> 실제 IP 주소를 숨겨 익명성을 제공합니다.</li>
+            <li><b>접속 속도 향상:</b> 자주 요청되는 콘텐츠를 캐시하여 더 빠르게 전달합니다.</li>
+            <li><b>접근 제어:</b> 특정 웹사이트 접속을 차단하거나 허용할 수 있습니다.</li>
+        </ul>
+        </p>
+
+        <h2><span class="blinking">◆</span> 근명고등학교 LABS 프록시 구조</h2>
+        <p>
+            다음은 근명고등학교 LABS로의 안전하고 효율적인 접근을 위한 프록시 구조입니다. 이 구조는 NetBird P2P(Peer-to-Peer) 터널링 기술을 활용하여 기존의 방식보다 더욱 유연하고
+            안전한 연결을 보장합니다.
+        </p>
+
+        <div class="diagram-container">
+            <div class="diagram-box">
+                <b>Proxy</b><br>
+                (외부 서버)
+            </div>
+            <div class="diagram-arrow">&lt;---&gt;</div>
+            <div class="diagram-box">
+                <b>NetBird P2P Tunnel</b><br>
+                (안전한 암호화 통로)
+            </div>
+            <div class="diagram-arrow">&lt;---&gt;</div>
+            <div class="diagram-box">
+                <b>근명고등학교 LABS</b><br>
+                (내부 네트워크)
+            </div>
+        </div>
+
+        <h3>1. Proxy (프록시)</h3>
+        <p>
+            외부에서 접속을 시도하는 모든 인터넷 요청은 이 프록시를 통해 이루어집니다. 프록시 서버는 여러분의 요청을 받아 암호화된 터널을 통해 안전하게 전송하는 역할을 합니다.
+        </p>
+
+        <h3>2. NetBird P2P Tunnel (터널)</h3>
+        <p>
+            NetBird는 P2P 터널링 기술을 사용하여 프록시와 근명고등학교 LABS 사이에 안전한 통신 통로를 만듭니다. 이 터널은 모든 데이터 트래픽을 강력하게 암호화하여 중간에 가로채거나 조작하는
+            것을 불가능하게 합니다. NetBird 터널은 다음의 특징을 가집니다:
+        <ul>
+            <li><b>분산형 구조:</b> 중앙 서버를 거치지 않고 직접 통신하여 효율적입니다.</li>
+            <li><b>양자 저항 암호화:</b> 최신 양자 저항 암호화를 사용하여 데이터를 양자 컴퓨터의 공격에서 보호합니다.</li>
+            <li><b>뛰어난 보안:</b> 최신 암호화 프로토콜을 사용하여 데이터를 보호합니다.</li>
+            <li><b>안정적인 연결:</b> 네트워크 환경 변화에 유연하게 대처합니다.</li>
+        </ul>
+        </p>
+
+        <h3>3. 근명고등학교 LABS</h3>
+        <p>
+            접속의 최종 목적지입니다. 학교에 위치한 LABS 서버로, 프록시를 통해 안전하게 접속할 수 있습니다. 이 구조 덕분에 외부에서도 LABS 자원을 이용할 수 있습니다.
+        </p>
+
+        <hr>
+        <div align="center" style="font-size: 10px;">
+            &copy; <span id="current-year"></span> 근명고등학교. All rights reserved. <br>
+            &copy; <span id="current-year"></span> 신윤재. All rights reserved. <br>
+            <a href="mailto:me@nergis.dev">Contact Us!</a>
+        </div>
+    </div>
+
+    <script defer>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
